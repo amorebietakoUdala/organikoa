@@ -1,29 +1,51 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
+        connections:
+            default:
+                url: '%env(resolve:DATABASE_URL)%'
+            a2sport:
+                url: '%env(resolve:A2SPORT_DATABASE_URL)%'
+        default_connection: 'default'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '16'
 
-        profiling_collect_backtrace: '%kernel.debug%'
-        use_savepoints: true
+        # profiling_collect_backtrace: '%kernel.debug%'
+        # use_savepoints: true
     orm:
+        default_entity_manager: 'default'
         auto_generate_proxy_classes: true
         enable_lazy_ghost_objects: true
-        report_fields_where_declared: true
-        validate_xml_mapping: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-        identity_generation_preferences:
-            Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
-        auto_mapping: true
-        mappings:
-            App:
-                type: attribute
-                is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+        entity_managers:
+            # Important: Don't change order 'ocs' must go first to avoid problems with migrations
+            ocs:
+                connection: 'a2sport'
+                mappings:
+                    ocs:
+                        type: attribute
+                        is_bundle: false
+                        dir: '%kernel.project_dir%/src/Entity/A2Sport'
+                        prefix: 'App\Entity\A2Sport'
+                        alias: Ocs
+            default:
+                connection: 'default'
+                mappings:
+                    App:
+                        type: attribute
+                        is_bundle: false
+                        dir: '%kernel.project_dir%/src/Entity/Default'
+                        # If we put App\Entity\Default to prefix as it should, we get an error with php bin/console make:migration saying:
+                        # "The class 'App\Entity\Ocs\Device' was not found in the chain configured namespaces App\Entity\Default"
+                        # So we leave prefix as 'App\Entity' that works as spected
+                        prefix: 'App\Entity'
+                        alias: App
+                report_fields_where_declared: true
+                validate_xml_mapping: true
+                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+                identity_generation_preferences:
+                    Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
+                # auto_mapping: true
         controller_resolver:
             auto_mapping: false
 

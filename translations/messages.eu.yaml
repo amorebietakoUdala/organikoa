@@ -1,0 +1,40 @@
+messages.appTitle: "Organikoa"
+link.logout: "Irten"
+
+# Menu
+navitem.openings: "Irekidurak"
+navitem.administration: "Administrazioa"
+navitem.users: "Erabiltzaileak"
+
+# Labels
+label.options: 'Aukerak'
+table.options: 'Aukerak'
+label.a2erabiltzailea.details: "Pertsonaren xehetasunak"
+
+# Titles
+title.openings.search: "Irekiduren bilaketa"
+
+# Buttons
+btn.search: "Bilatu"
+
+# A2Erabiltzailea
+a2Erabiltzailea.dni: "NAN"
+a2Erabiltzailea.nombre: "Izena"
+a2Erabiltzailea.apellido1: "Lehen Abizena"
+a2Erabiltzailea.apellido2: "Bigarren Abizena"
+
+# Openings
+openings.fechaFin: "Amaiera data"
+openings.fechaInicio: "Hasiera data"
+openings.dni: "NAN"
+openings.id: "Id"
+openings.fecha: "Data"
+openings.tarjeta: "Txartela"
+openings.direccion: "Helbidea"
+openings.contenedorId: "Edukiontziaren zenbakia"
+
+# Messages
+message.no_records: "Ez da erregistrorik aurkitu."
+
+# Error messages
+error.form.incomplete: 'Mesedez, bete formularioaren eremu guztiak.'

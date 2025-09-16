@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	{% if openings.items is defined and openings.items|length > 0 %}
+		<table id="taula" class="table bootstrap-table mt-3" data-page-size="{{ pageSize }}" data-page-sortname="{{ sortName }}" data-page-sortorder="{{ sortOrder }}" data-page-number="{{ page }}" {{ stimulus_controller('table', { 'url': path('openings_index'), 'exportName': 'openings'} ) }}>
+			<thead>
+				<tr>
+					<th>{{ 'openings.id' | trans }}</th>
+					<th>{{ 'openings.fecha' | trans }}</th>
+					<th>{{ 'openings.tarjeta' | trans }}</th>
+					<th>{{ 'openings.direccion' | trans }}</th>
+					<th>{{ 'openings.contenedorId' | trans }}</th>
+					{# <th>{{ 'table.options' | trans }}</th> #}
+				</tr>
+			</thead>
+			<tbody>
+				{% for opening in openings.items %}
+					<tr>
+                  <td>{{ opening.id }}</td>
+                  <td>{{ opening.fecha | date('Y-m-d h:i:s')}}</td>
+                  <td>{{ opening.tarjeta }}</td>
+                  <td>{{ opening.direccion }}</td>
+                  <td>{{ opening.contenedorId }}</td>
+{#						
+                  <td>
+							 <a class="text-decoration-none" href="{{ path('computer_index', {'start_ip': subnet.firstUsableIp, 'end_ip': subnet.lastUsableIp}) }}" data-action="click->table#onClick" data-pagination="false" title="{{ 'btn.search' | trans }}">
+								<i class="fa fa-search"></i>
+							</a>&nbsp;
+							<a class="text-decoration-none" href="{{ path('subnet_free_ips_index', {'subnet': subnet.pk}) }}" data-action="click->table#onClick" data-pagination="false" title="{{ 'btn.free' | trans }}">
+								<i class="fa fa-asterisk"></i>
+							</a>
+						</td>
+#}
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<div class="container alert alert-info m-2 text-center">
+			{{'message.no_records' | trans }}
+		</div>
+	{% endif %}
+</div>

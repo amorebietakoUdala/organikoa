@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.openings.search' | trans }}{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        {{ include('openings/_formSearchForm.html.twig') }}
+    </div>
+    <div class="container-fluid mt-4">
+        {% if a2Erabiltzailea is defined and a2Erabiltzailea %}
+            <div class="">
+                <h2>{{ 'label.a2erabiltzailea.details' | trans }}</h2>
+                <p><strong>{{ 'a2Erabiltzailea.dni' | trans }}:</strong>&nbsp;{{ a2Erabiltzailea.dni }}
+                    {{ 'a2Erabiltzailea.nombre' | trans }}: {{ a2Erabiltzailea.nombre }} &nbsp;{{ a2Erabiltzailea.apellido1 }} &nbsp;{{ a2Erabiltzailea.apellido2 }}
+                </p>
+            </div>
+        {% endif %}
+            {{ include('openings/_list.html.twig', {
+                'openings': openings,
+                'pageSize': pageSize,
+                'sortName': sortName,
+                'sortOrder': sortOrder,
+                'page': page
+            }) }}
+    </div>
+{% endblock %}

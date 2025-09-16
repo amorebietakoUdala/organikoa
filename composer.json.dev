@@ -7,8 +7,8 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "amorebietakoudala/stimulus-controller-bundle": "^1.0",
-        "amorebietakoudala/user-bundle": "^2.0",
+        "amorebietakoudala/stimulus-controller-bundle": "@dev",
+        "amorebietakoudala/user-bundle": "*@dev",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.16",
         "doctrine/doctrine-migrations-bundle": "^3.4",
@@ -60,7 +60,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "AMREU\\UserBundle\\": "../bundles/user-bundle/src/",
+            "AMREU\\StimulusControllerBundle\\": "../bundles/stimulus-controller-bundle/"
         }
     },
     "autoload-dev": {
@@ -108,5 +110,15 @@
         "symfony/maker-bundle": "^1.64",
         "symfony/stopwatch": "7.3.*",
         "symfony/web-profiler-bundle": "7.3.*"
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../bundles/user-bundle"
+        },
+        {
+            "type": "path",
+            "url": "../../bundles/stimulus-controller-bundle"
+        }
+    ]
 }

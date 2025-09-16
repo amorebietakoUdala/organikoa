@@ -1,0 +1,42 @@
+messages.appTitle: "Organikoa"
+link.logout: "Salir"
+
+# Menu
+navitem.openings: "Aperturas"
+navitem.administration: "Administración"
+navitem.users: "Usuarios"
+
+# Labels
+label.options: 'Opciones'
+table.options: 'Opciones'
+label.a2erabiltzailea.details: "Detalles de la persona"
+
+# Titles
+title.openings.search: "Búsqueda de aperturas"
+
+# Buttons
+btn.search: "Buscar"
+
+# A2Erabiltzailea
+a2Erabiltzailea.dni: "DNI"
+a2Erabiltzailea.nombre: "Nombre"
+a2Erabiltzailea.apellido1: "Apellido1"
+a2Erabiltzailea.apellido2: "Apellido2"
+
+# Openings
+openings.fechaFin: "Fecha Inicio"
+openings.fechaInicio: "Fecha Fin"
+openings.dni: "DNI"
+openings.id: "Id"
+openings.fecha: "Fecha"
+openings.tarjeta: "Tarjeta"
+openings.direccion: "Dirección"
+openings.contenedorId: "Id Contenedor"
+
+
+
+# Messages
+message.no_records: "No se han encontrado registros."
+
+# Error messages
+error.form.incomplete: 'Por favor, rellene todos los campos del formulario.'

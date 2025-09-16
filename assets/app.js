@@ -1,10 +1,6 @@
 import './bootstrap.js';
-/*
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
- */
-import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+/** Event if the styles work, without this dropdowns don't so, don't forget to add it */
+import 'bootstrap';
+
+import './styles/app.css';
