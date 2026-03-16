@@ -16,6 +16,10 @@ class OpeningSearchFormType extends AbstractType
                 'disabled' => $readonly,
                 'label' => 'openings.dni',
             ])
+            ->add('tarjeta', null, [
+                'disabled' => $readonly,
+                'label' => 'openings.tarjeta',
+            ])
             ->add('fechaInicio', null, [
                 'disabled' => $readonly,
                 'label' => 'openings.fechaInicio',

@@ -9,6 +9,12 @@
 		</div>
 
 		<div class="col-md-1">
+			{{ form_row(form.tarjeta, {
+            'attr': {'class': 'form-control form-control-sm'},
+         }) }}
+		</div>
+
+		<div class="col-md-1">
             {{ form_row(form.fechaInicio, { 'attr': { 
                     'class' : 'form-control form-control-sm', 
                     'data-controller' : 'datetimepicker', 

@@ -22,11 +22,13 @@ a2Erabiltzailea.dni: "NAN"
 a2Erabiltzailea.nombre: "Izena"
 a2Erabiltzailea.apellido1: "Lehen Abizena"
 a2Erabiltzailea.apellido2: "Bigarren Abizena"
+a2Erabiltzailea.tarjeta: "Txartela"
 
 # Openings
 openings.fechaFin: "Amaiera data"
 openings.fechaInicio: "Hasiera data"
 openings.dni: "NAN"
+openings.cardNumber: "Txartel zenbakia"
 openings.id: "Id"
 openings.fecha: "Data"
 openings.tarjeta: "Txartela"
@@ -35,6 +37,7 @@ openings.contenedorId: "Edukiontziaren zenbakia"
 
 # Messages
 message.no_records: "Ez da erregistrorik aurkitu."
+message.cardNotRegisteredInA2Sport: "{cardNumberDecimal} zenbakidun txartela ez dago A2Sporten erregistratuta. Bilatu seigarbost-en zuzenean {cardNumberHex} zenbakidun txartela ea zabalketarik daukan."
 
 # Error messages
-error.form.incomplete: 'Mesedez, bete formularioaren eremu guztiak.'
+error.form.incomplete: 'Mesedez, formularioaren datak eta NANa edo tartxel zenbakia bete.'

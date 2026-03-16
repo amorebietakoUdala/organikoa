@@ -38,4 +38,12 @@ class A2ErabiltzaileakRepository extends ServiceEntityRepository
         return $qb->getQuery()->getOneOrNullResult();
     }
 
+    public function findOneByTarjeta(string $tarjeta): ?A2Erabiltzaileak
+    {
+        $qb = $this->createQueryBuilder('a')
+            ->andWhere('a.tarjeta = :tarjeta')
+            ->setParameter('tarjeta',$tarjeta);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
+
 }

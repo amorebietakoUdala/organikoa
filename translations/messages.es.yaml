@@ -27,6 +27,7 @@ a2Erabiltzailea.apellido2: "Apellido2"
 openings.fechaFin: "Fecha Inicio"
 openings.fechaInicio: "Fecha Fin"
 openings.dni: "DNI"
+openings.cardNumber: "Número de tarjeta"
 openings.id: "Id"
 openings.fecha: "Fecha"
 openings.tarjeta: "Tarjeta"
@@ -37,6 +38,7 @@ openings.contenedorId: "Id Contenedor"
 
 # Messages
 message.no_records: "No se han encontrado registros."
+message.cardNotRegisteredInA2Sport: "La tarjeta {cardNumberDecimal} no está registrada en A2Sport. Busca directamente en seigarbost la tarjeta: {cardNumberHex} para ver si tiene aperturas."
 
 # Error messages
-error.form.incomplete: 'Por favor, rellene todos los campos del formulario.'
+error.form.incomplete: 'Por favor, rellene las fecha y el DNI o el número de tarjeta.'

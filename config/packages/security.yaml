@@ -38,8 +38,9 @@ security:
                 path: user_security_logout
 
             remember_me:
+                name: "REMEMBERME_%app_name%"
                 secret: "%kernel.secret%"
-                lifetime: 2592000                
+                lifetime: 2592000          
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true

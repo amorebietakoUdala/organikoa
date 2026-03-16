@@ -4,8 +4,8 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
-  app_name: zain
-  locale: es
+  app_name: "zain"
+  locale: "es"
   department: '%env(DEPARTMENT_DEFAULT)%'
   contactEmail: '%env(CONTACT_EMAIL_DEFAULT)%'
   departmentDefault: '%env(DEPARTMENT_DEFAULT)%'
