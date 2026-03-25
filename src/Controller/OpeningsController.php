@@ -49,7 +49,6 @@ final class OpeningsController extends BaseController
                 if ( $a2Erabiltzailea !== null ) {
                     $aperturas = $this->seigarbostApiService->getAperturas(new \DateTime($data['fechaInicio']), new \DateTime($data['fechaFin']), $a2Erabiltzailea->getTarjetaHex());
                 } else {
-                    dump($this->getTarjetaHex($data['tarjeta']));
                     // 'message.cardNotRegisteredInA2Sport'
                     $this->addFlash('error', $this->translator->trans('message.cardNotRegisteredInA2Sport',[
                         '{cardNumberDecimal}' => $data['tarjeta'],
